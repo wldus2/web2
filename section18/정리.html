@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .ani {
+            /* 트랜지션 공통 */
+                /* animation-timing-function: 가속도 함수; */
+                /* animation-duration: 지속 시간; */
+                /* animation-delay: 지연; */
+
+
+            /* 애니메이션 고유 */
+                /* animation-play-state: 재생 상태, play: 재생 paused: 일시 정지; */
+                /* animation-fill-mode: 재생되고 어떻게 할 거냐; */
+                /* animation-iteration-count: 반복 횟수; */
+                /* animation-name: 애니메이션 이름; */
+                /* animation-direction: 재생 방향, 정방향? 역방향? 정>역?; */
+
+
+            /* 애니메이션은
+            1, transform: translateX 포지션보다는 안정적, 상황에 따라 포지션 쓰기도 함
+            2. position: absolute
+            3. margin-left 그다음 쓰레기
+            4. body {padding-left} 가장 쓰레기
+            로 움직일 수 있음
+             */
+            animation: alternate;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 5000px;
+        }
+
+
+        #first-banner {
+            background-color: gray;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* 애니메이션 전체를 감싸는 div. 위치는 left와 top을 이용해 지정해주었다. */
+        .mouse-animation {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translateX(-50%);
+            animation: mouse 2s infinite;
+        }
+
+        .mouse{
+
+            /* 이런값들로 길쭉하고 모서리가 둥근 사각형을 그릴수있다. */
+            /* 가로로 길게하면 버튼이 되겠죠? */
+            width: 24px;
+            height: 40px;
+            border-radius: 12px;
+            box-sizing: border-box;
+
+            border: 2px solid white;
+            position: relative;
+        }
+        .mouse-wheel {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: calc(50% - 2px);
+            top: 10px;
+
+            animation: wheel 2s infinite;
+        }
+
+
+        /* 마우스 애니메이션 키프레임을 4개로 쪼개서 만들었습니다. */
+        /* 키프레임 애니메이션은 웹이나 영상부문에서 굉장히 많이 쓰이고있기때문에 */
+        /* 아래 키프레임이 잘 이해되지 않는다면 관련 유튜브 영상 2개정도 찾아보는걸 추천드릴게요. */
+
+        @keyframes mouse {
+            from{
+                /* 오퍼시티만 0 */
+                opacity: 0;
+                transform: translateX(-50%) translateY(0);
+            }
+            
+            33%{
+                /* 오퍼시티만 1 */
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+                
+            }
+            
+            66%{
+                /* 이전값에서 translateY만 이동 */
+                opacity: 1;
+                transform: translateX(-50%) translateY(20px);
+                
+            }
+            to {
+                /* 이전값에서 오퍼시티만 0으로 변경 */
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+
+        @keyframes wheel {
+
+            from{
+                transform: translateY(0);
+            }
+            
+            33%{
+                transform: translateY(0);
+
+            }
+
+            66%{
+                transform: translateY(16px);
+
+            }
+
+            to {
+                
+                transform: translateY(16px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 원페이지 디자인이라고 가정 하고 디자인. -->
+    <section id="first-banner">
+
+
+    <!-- 내용들이 있겠죠? -->
+
+        <!-- -------------------------- -->
+
+        <!-- 마우스 애니메이션 전체를 감싸는 div -->
+        <div class="mouse-animation">
+            <!-- 마우스테두리 -->
+            <div class="mouse">
+                    <!-- 마우스 휠 -->
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

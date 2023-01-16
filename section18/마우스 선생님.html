@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 5000px;
+        }
+
+        #first-banner {
+            background-color: gray;
+            height: 100vh;
+            position: relative;
+        }
+
+        .mouse-animation {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translateX(-50%);
+
+            animation: mouse 2s infinite;
+        }
+
+        .mouse {
+            width: 24px;
+            height: 40px;
+            border-radius: 12px;
+            border: 2px solid white;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .mouse-wheel {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: calc(50% - 2px);
+            top: 10px;
+
+            animation: wheel 2s infinite;
+        }
+
+        @keyframes mouse {
+            form {
+                opacity: 0;
+                transform: translateX(-50%) translateY(0);
+            }
+            33% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);   
+            }
+            66% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+
+        @keyframes wheel {
+            from {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            33% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            66% {
+                opacity: 1;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="first-banner">
+
+        <!-- 내용 있음 -->
+
+
+        <div class="mouse-animation">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+</html>

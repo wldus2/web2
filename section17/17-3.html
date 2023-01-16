@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #graph {
+            width: 700px;
+            overflow: hidden;
+            border: 2px solid #222;
+            margin: 30px;
+        }
+
+        .box {
+            width: 30px;
+            height: 50px;
+            position: relative;
+            background-color: blue;
+            margin: 10px;
+            transition-duration: 5s;
+        }
+
+        /* 
+        박스 앞 띄어쓰기는 부모자식 구별 용도
+        호버는 마우스 올리는 걸 뜻함
+        호버되는 건 그래프인데 달라지는 건 박스의 값
+        띄어쓰기를 안 하면 인과 관계가 없는 거임
+         */
+        #graph:hover .box {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="graph">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

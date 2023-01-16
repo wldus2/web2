@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .mouse {
+            width: 30px;
+            height: 50px;
+            border-radius: 40%;
+            border: 3px solid;
+            border-color: white;
+
+            animation: scroll 1s infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                opacity: 0;
+                transform: translateY(0%);
+            }
+            30% {
+                opacity: 100%;
+                transform: translateY(0%);
+            }
+            90% {
+                opacity: 100%;
+                transform: translateY(100%);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse"></div>
+</body>
+</html>
