@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            position: relative;
+        }
+
+        /* 원을 겹치려면 포지션: 앱솔루트가 들어가야 하니까 컨테이너로 감싸기 */
+        .raider-container {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+        }
+
+        .raider-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+
+            animation: raider-animation 2s infinite;
+        }
+
+        .raider-circle:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .raider-circle:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes raider-animation {
+            from {
+                transform: scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="raider-container">
+            <div class="raider-circle"></div>
+            <div class="raider-circle"></div>
+            <div class="raider-circle"></div>
+        </div>
+    </div>
+</body>
+</html>

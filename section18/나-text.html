@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            position: relative;
+        }
+
+        .text-container {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 150px;
+            top: 150px;
+        }
+
+        .one {
+            width: 50px;
+            height: 250px;
+            background-color: orangered;
+            float: left;
+            animation: text-animation1 1s infinite;
+        }
+        
+        .two {
+            width: 50px;
+            height: 50px;
+            background-color: orangered;
+            float: left;
+        }
+        
+        .three {
+            width: 50px;
+            height: 250px;
+            background-color: orangered;
+            float: left;
+        }
+
+        @keyframes text-animation1 {
+            from {
+                /* transform: translateY(0%); */
+                transform: scaleY(0%);
+            }
+            to {
+                /* transform: translateY(100%); */
+                transform: scaleY(100%);
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text-container">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </div>
+</body>
+</html>
