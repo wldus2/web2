@@ -11,7 +11,26 @@
             padding: 0;
         }
 
-        @media screen and (max-width:767px) {
+        /* 
+        미디어가 스크린이면서 ~~일 때
+        그런데 이런 예제로 하면 안 좋음
+        컬러랑 폰트 웨이트는 공통돼서 한번에 쓰는 게 좋고
+        모바일 퍼스트라면 첫 번째는 굳이 767픽셀까지라고 안 해 둬도 됨 
+        + 맥스 위드 안 써도 됨 걍 
+        */
+
+        /* 
+        만약 모바일 퍼스트일 때
+        기본 (모바일)
+        태블릿 (min-width:768px) 언저리
+        pc (min-width:1400px) 언저리
+
+        만약 pc 퍼스트일 때
+        기본 (피씨)
+        
+        */
+
+        /* @media screen and (max-width:767px) {
             html {
                 background-color: red;
                 color: white;
@@ -32,6 +51,24 @@
                 background-color: blue;
                 color: white;
                 font-weight: 900;
+            }
+        } */
+
+        html {
+                background-color: red;
+                color: white;
+                font-weight: 900;
+            }
+
+        @media screen and (min-width:768px) {
+            html {
+                background-color: green;
+            }
+        }
+
+        @media screen and (min-width:960px) {
+            html {
+                background-color: blue;
             }
         }
     </style>

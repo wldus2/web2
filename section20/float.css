@@ -1,0 +1,30 @@
+/* <style> */
+
+    .container {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #222;
+    }
+
+    .container > div {
+        width: 100px;
+        height: 100px;
+        background-color: cadetblue;
+        border: 1px solid #444;
+    }
+
+    .float-align {
+        float: left;
+        /* margin-top: 200px; 이건 나중에 높이 늘어나면 가운데 정렬 안 됨 */
+    }
+
+    .flex-con {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        flex-direction: column;
+        /* 축 방향을 바꾸면 수직, 수평이 바뀐다 */
+    }
+
+
+ /* </style> */
